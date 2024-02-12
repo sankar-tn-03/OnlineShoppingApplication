@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="icon"  type="image/png" href="cart.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XlMZiIbBW0npeLe46MwL4pBv4bTOi15mQtKu47fpmOjmsDgvEjjnsqBv1P08bPY24/UVPSDn4/Z2j7xl+GTwXA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="headerNav">
+        <nav id="navButtons">
+            <div class="navButtonElements" onclick="NavigateToHome()">
+                <img class="icon" src="house.svg" alt="SVG Icon">
+                <h3 style="color: orangered;">Home</h3>
+            </div>
+            <div class="navButtonElements" onclick="NavigateToHome()">
+                <img class="icon" src="category.svg" alt="SVG Icon">
+                <select style="color: orangered;" id="dropdown" onchange="PerformAction()">
+                    <option value="default" selected><h3>Category</h3></option>
+                    <option value="option1"><h3>Furniture</h3></option>
+                    <option value="option2"><h3>Grocery</h3></option>
+                    <option value="option3"><h3>Clothes</h3></option>
+                </select>
+            </div>
+            <div class="navButtonElements" onclick="NavigateToContact()">
+                <img class="icon" src="phone-call-icon.svg" alt="SVG Icon">
+                <h3 style="color: orangered;">Contact</h3>
+            </div>
+            <div class="navButtonElements" onclick="NavigateToCart()">
+                <img class="icon" src="cart.svg" alt="SVG Icon">
+                <h3 style="color: orangered;">Cart</h3>
+            </div>
+            <div class="navButtonElements" onclick="NavigateToLogin()">
+                <img class="icon" src="power-off-icon.svg" alt="SVG Icon">
+                <h3 style="color: orangered;">Log Out</h3>
+            </div>
+    
+        </nav>
+    </header>
+    <div id="Contact">
+        <h2>Contact Us</h2>
+        <h3>If you have any questions or concerns, please feel free to reach out to our customer care team using the form below:</h3>
+    
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

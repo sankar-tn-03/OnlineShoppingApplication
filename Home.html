@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers Home</title>
+    <link rel="icon"  type="image/png" href="cart.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XlMZiIbBW0npeLe46MwL4pBv4bTOi15mQtKu47fpmOjmsDgvEjjnsqBv1P08bPY24/UVPSDn4/Z2j7xl+GTwXA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="headerNav">
+        <nav id="navButtons">
+            <div class="navButtonElements" onclick="NavigateToHome()">
+                <img class="icon" src="house.svg" alt="SVG Icon">
+                <h3 class="navtext" onclick="HomeController()">Home</h3>
+            </div>
+            <div class="navButtonElements">
+                <img class="icon" src="category.svg" alt="SVG Icon">
+                <select style="color: orangered;" class="navtext" id="dropdown" onchange="PerformAction()">
+                    <option value="default" selected><h3>Category</h3></option>
+                    <option value="option1"><h3>Furniture</h3></option>
+                    <option value="option2"><h3>Grocery</h3></option>
+                    <option value="option3"><h3>Clothes</h3></option>
+                </select>
+            </div>
+            <div class="navButtonElements" onclick="NavigateToContact()">
+                <img class="icon" src="phone-call-icon.svg" alt="SVG Icon">
+                <h3 class="navtext">Contact</h3>
+            </div>
+            <div class="navButtonElements" onclick="NavigateToCart()">
+                <img class="icon" src="cart.svg" alt="SVG Icon">
+                <h3 class="navtext">Cart</h3>
+            </div>
+            <div class="navButtonElements" onclick="NavigateToLogin()">
+                <img class="icon" src="power-off-icon.svg" alt="SVG Icon">
+                <h3 class="navtext" >Log Out</h3>
+            </div>
+    
+        </nav>
+    </header>
+    <div id="body">
+        <div id="start">
+
+        </div>
+        <div id="homeContent">
+            <h1 style="background-color: rgba(255, 255, 255, 0.722); text-align: center;" id="headings">Welcome!!!</h1>
+            <h2 style="background-color: rgba(255, 255, 255, 0.722);" >Explore a world of endless choices at our online shopping destination. Discover curated collections, unbeatable deals, and a seamless shopping experience. Welcome to your go-to destination for all your shopping needs!</h2>
+        </div>
+        <div id="furniture">
+            <h1 class="headings">Furnitures</h1>
+            <div class="grid-container">
+                <div id="f1" class="grid-item">
+                    <img src="furniture1.jpg" alt="furniture1">
+                    <h3>Furniture: 25$</h3>
+                    <button onclick="addToCart(90,25)">Add To Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="furniture2.jpg" alt="furniture1">
+                    <h3>Furniture: 56$</h3>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="furniture3.jpg" alt="furniture1">
+                    <h3>Furniture: 12$</h3>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="furniture4.jpg" alt="furniture1">
+                    <h3>Furniture: 78$</h3>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="furniture5.jpg" alt="furniture1">
+                    <h3>Furniture: 23$</h3>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="furniture6.jpg" alt="furniture1">
+                    <h3>Furniture: 56$</h3>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="Grocery">
+            <h1 class="headings">Groceries</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="grocery1.jpg" alt="grocery">
+                    <h3>Grocery: 3$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="grocery2.jpg" alt="grocery">
+                    <h3>Grocery: 5$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="grocery3.jpg" alt="grocery">
+                    <h3>Grocery: 7$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="grocery4.jpg" alt="grocery">
+                    <h3>Grocery: 10$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="grocery5.jpg" alt="grocery">
+                    <h3>Grocery: 8%</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="grocery6.jpg" alt="grocery">
+                    <h3>Grocery: 23$</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="Clothes">
+            <h1 class="headings">Clothes</h1>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="cloth1.jpg" alt="clothes">
+                    <h3>Clothes: 23$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="cloth2.jpg" alt="clothes">
+                    <h3>Clothes: 33$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="cloth3.jpg" alt="clothes">
+                    <h3>Clothes: 12$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="cloth4.jpg" alt="clothes">
+                    <h3>Clothes: 63$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="cloth5.jpg" alt="clothes">
+                    <h3>Clothes: 56$</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="grid-item">
+                    <img src="cloth6.jpg" alt="clothes">
+                    <h3>Clothes: 17$</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footerNav">
+        <p style="text-align: center;">online shoppig @2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
